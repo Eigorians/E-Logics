@@ -1,0 +1,4 @@
+name: E-Logics
+version: '1.0-SNAPSHOT'
+main: com.eastcompany.eastsub.eLogics.ELogics
+api-version: '1.211'

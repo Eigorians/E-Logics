@@ -5,7 +5,7 @@ import com.eastcompany.eastsub.eLogics.ai.ELogicAICommandExecutor;
 import com.eastcompany.eastsub.eLogics.resourcepack.PackManager;
 import com.eastcompany.eastsub.eLogics.resourcepack.ResourceCommand;
 import com.eastcompany.eastsub.eLogics.showhide.HideShowCommandExecutor;
-import com.eastcompany.eastsub.eLogics.stick.StickCommandExecutor;
+import com.eastcompany.eastsub.eLogics.stick.command.StickCommandExecutor;
 import com.eastcompany.eastsub.eLogics.stick.StickListener;
 import com.eastcompany.eastsub.eLogics.stick.StickManager;
 import com.eastcompany.eastsub.eLogics.stick.display.StickDisplayListener;

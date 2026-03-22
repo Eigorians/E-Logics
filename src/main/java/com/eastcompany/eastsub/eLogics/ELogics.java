@@ -5,9 +5,9 @@ import com.eastcompany.eastsub.eLogics.ai.ELogicAICommandExecutor;
 import com.eastcompany.eastsub.eLogics.resourcepack.PackManager;
 import com.eastcompany.eastsub.eLogics.resourcepack.ResourceCommand;
 import com.eastcompany.eastsub.eLogics.showhide.HideShowCommandExecutor;
-import com.eastcompany.eastsub.eLogics.stick.command.StickCommandExecutor;
 import com.eastcompany.eastsub.eLogics.stick.StickListener;
 import com.eastcompany.eastsub.eLogics.stick.StickManager;
+import com.eastcompany.eastsub.eLogics.stick.command.StickCommandExecutor;
 import com.eastcompany.eastsub.eLogics.stick.display.StickDisplayListener;
 import com.eastcompany.eastsub.eLogics.stick.posselecter.SelectionManager;
 import com.github.retrooper.packetevents.PacketEvents;
@@ -52,7 +52,7 @@ public final class ELogics extends JavaPlugin {
     private void setupStick(){
         selectionManager = new SelectionManager();
 
-        StickManager stickManager = new StickManager(this);
+        stickManager = new StickManager(this);
         getServer().getPluginManager().registerEvents(new StickListener( stickManager, this), this);
         new StickCommandExecutor(this,stickManager ,selectionManager);
         getLogger().info("E-Logics: All modules initialized successfully.");

@@ -61,10 +61,12 @@ public class StickDisplayListener implements Listener {
             @Override
             public void run() {
                 for (Player player : plugin.getServer().getOnlinePlayers()) {
-                    if (player.getInventory().getItemInMainHand().getType() == Material.STICK) {
-                        updatePlayerDisplays(player);
-                    } else {
-                        clearAll(player);
+                    if(plugin.getStickManager() != null) {
+                        if (plugin.getStickManager().isIntelliStick(player.getInventory().getItemInMainHand())) {
+                            updatePlayerDisplays(player);
+                        } else {
+                            clearAll(player);
+                        }
                     }
                 }
             }
